@@ -1,12 +1,10 @@
 using Documenter, Expectations 
 
 # Compile the raw documentation. 
-makedocs()
+makedocs(sitename = "Expectations.jl")
 
 # Push the documentation to the server.
 deploydocs(
     deps   = Deps.pip("mkdocs", "python-markdown-math"),
-    repo = "github.com/econtoolkit/Expectations.jl.git",
-    julia = "1.0",
-    osname = "linux"
-)
+    repo = "github.com/QuantEcon/Expectations.jl.git",
+    forcepush = true)
